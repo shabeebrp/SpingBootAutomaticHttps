@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ChallengeController {
-	
+	public static String challengeResponse = "Hello";
 	@GetMapping("/.well-known/acme-challenge/{token}")
-	public String respondToHttpChallenger(@PathVariable String token) {
-		return "This is my response string to your challenge - "+token;
+	public String respondToHttpChallenge(@PathVariable String token) {
+		return challengeResponse;
 	}
 }
